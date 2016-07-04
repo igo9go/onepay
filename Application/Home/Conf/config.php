@@ -36,4 +36,12 @@ return array(
         '__JS__'     => __ROOT__ . '/Public/' . MODULE_NAME . '/js',
 		'___EXPLAIN__' => __ROOT__ . '/Picture/Explain',
     ),
+	'MAIL_HOST' =>'smtp.exmail.qq.com',
+	'MAIL_SMTPAUTH' => true,
+	'MAIL_USERNAME' => '626875651',
+	'MAIL_PASSWORD' => 'zq512194',
+	'MAIL_FROM' => 'justudy@igo9go.cn',
+	'MAIL_FROMNAME'=>'IGO9GO',
+	'MAIL_ISHTML' => true,
+	'MAIL_CHARSET' => 'UTF-8'
 );

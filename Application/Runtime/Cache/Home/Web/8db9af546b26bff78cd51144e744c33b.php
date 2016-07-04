@@ -70,7 +70,7 @@
 
   <script src="<?php echo ($web_tplpath); ?>js/jquery.min.js"></script>
   <script type="text/javascript">var tplpath='<?php echo ($web_tplpath); ?>'</script>
-  <script src="/onepay/Public/Static/layer/layer.js"></script>
+  <script src="/Public/Static/layer/layer.js"></script>
   <script src="<?php echo ($web_tplpath); ?>js/ajax.js"></script>
   <script src="<?php echo ($web_tplpath); ?>js/public.js"></script>
   <?php if(!empty($login_wx_appid)): ?><script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>

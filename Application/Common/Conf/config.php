@@ -7,4 +7,12 @@ return array(
     'DB_PWD'    => '',  // 密码
     'DB_PORT'   => '3306', // 端口
     'DB_PREFIX' => 'hx_', // 数据库表前缀
+    'MAIL_HOST' =>'igo9go.cn',
+    'MAIL_SMTPAUTH' => true,
+    'MAIL_USERNAME' => '626875651',
+    'MAIL_PASSWORD' => 'zq512194',
+    'MAIL_FROM' => 'justudy@igo9go.cn',
+    'MAIL_FROMNAME'=>'IGO9GO',
+    'MAIL_ISHTML' => true,
+    'MAIL_CHARSET' => 'UTF-8'
 );

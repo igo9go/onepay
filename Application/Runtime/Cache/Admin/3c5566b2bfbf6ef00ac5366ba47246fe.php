@@ -5,20 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="shortcut icon" href="/onepay/Public/Admin/images/favicon.png">
+	<link rel="shortcut icon" href="/Public/Admin/images/favicon.png">
 	<title><?php echo ($webtitle); ?>--用户登陆</title>
 	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet" type="text/css" href="/onepay/Public/Admin/js/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="/onepay/Public/Admin/fonts/font-awesome-4/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="/Public/Admin/js/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/Public/Admin/fonts/font-awesome-4/css/font-awesome.min.css" />
 	<!-- Custom styles for this template -->
-	<link rel="stylesheet" type="text/css" href="/onepay/Public/Admin/css/style.css" />	
+	<link rel="stylesheet" type="text/css" href="/Public/Admin/css/style.css" />	
 </head>
 <body class="texture">
 <div id="cl-wrapper" class="login-container">
 	<div class="middle-login">
 		<div class="block-flat">
 			<div class="header">							
-				<h3 class="text-center"><img class="logo-img" src="/onepay/Public/Admin/images/logo.png" alt="logo"/> <?php echo ($webtitle); ?></h3>
+				<h3 class="text-center"><img class="logo-img" src="/Public/Admin/images/logo.png" alt="logo"/> <?php echo ($webtitle); ?></h3>
 			</div>
 			<div>
 				<form style="margin-bottom: 0px !important;" class="form-horizontal" method="post" action="<?php echo U();?>">
@@ -51,8 +51,8 @@
 		<div class="text-center out-links"><a href="#"><?php echo ($webtitle); ?> &copy; 2014</a></div>
 	</div> 
 </div>
-<script type="text/javascript" src="/onepay/Public/Admin/js/jquery.js"></script>
-<script type="text/javascript" src="/onepay/Public/Admin/js/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/onepay/Public/Admin/js/behaviour/web.js"></script>
+<script type="text/javascript" src="/Public/Admin/js/jquery.js"></script>
+<script type="text/javascript" src="/Public/Admin/js/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/Public/Admin/js/behaviour/web.js"></script>
 </body>
 </html>

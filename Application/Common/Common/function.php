@@ -197,11 +197,13 @@ function get_user_pic($id){
     return completion_pic(M('User')->where('id='.$id)->getField('headimgurl'));
 }
 
-function sendMail($to, $title, $content){
+function sendMail2($to, $title, $content){
     import('Com.PHPMailer.PHPMailerAutoload');
     $mail = new \PHPMailer();
+    $mail->SMTPDebug = 1;
     $mail->IsSMTP(); // 启用SMTP
     $mail->Host=C('MAIL_HOST'); //smtp服务器的名称（这里以QQ邮箱为例）
+    $mail->Hostname = 'igo9go.cn';
     $mail->SMTPAuth = C('MAIL_SMTPAUTH'); //启用smtp认证
     $mail->Username = C('MAIL_USERNAME'); //你的邮箱名
     $mail->Password = C('MAIL_PASSWORD') ; //邮箱密码
@@ -217,6 +219,48 @@ function sendMail($to, $title, $content){
     return($mail->Send());
 }
 
+function sendMail3($to, $title, $content){
+    import('Com.PHPMailer.PHPMailerAutoload');
+    $mail = new \PHPMailer();
+    $mail->SMTPDebug = 1;
+    $mail->IsSMTP(); // 启用SMTP
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 465;
+    $mail->Host='smtp.qq.com'; //smtp服务器的名称（这里以QQ邮箱为例）
+    $mail->Hostname = 'www.igo9go.cn';
+    $mail->SMTPAuth = 1; //启用smtp认证
+    $mail->Username = '626875651'; //你的邮箱名
+    $mail->Password = 'zq512194' ; //邮箱密码
+    $mail->From = 'justudy@igo9go.cn'; //发件人地址（也就是你的邮箱地址）
+    $mail->FromName = 'igo9go'; //发件人姓名
+    $mail->AddAddress($to,"尊敬的客户");
+    $mail->WordWrap = 50; //设置每行字符长度
+    $mail->IsHTML(true); // 是否HTML格式邮件
+    $mail->CharSet='UTF'; //设置邮件编码
+    $mail->Subject =$title; //邮件主题
+    $mail->Body = $content; //邮件内容
+    $mail->AltBody = "这是一个纯文本的身体在非营利的HTML电子邮件客户端"; //邮件正文不支持HTML的备用显示
+    return($mail->Send());
+}
+
+function sendMail($to, $title, $content)
+{
+    import('Com.PHPMailer.PHPMailerAutoload');
+    $mail = new \PHPMailer();
+    $mail->isSMTP(true);
+    $mail->isHTML(true);
+    $mail->Host = 'smtp.qq.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = '626875651';
+    $mail->Password = 'zq512194';
+    $mail->From = 'justudy@igo9go.cn';
+    $mail->setFrom('justudy@igo9go.cn', 'igo9go');
+    $mail->AddAddress($to,"尊敬的客户");
+
+    $mail->Subject =$title; //邮件主题
+    $mail->Body = $content; //邮件内容
+    return $mail->send();
+}
 function activity($type,$record_id = null, $user_id = null){
     $activity=M('Activity')->field('name')->where('type='.$type)->select();
     foreach((array)$activity as $value){

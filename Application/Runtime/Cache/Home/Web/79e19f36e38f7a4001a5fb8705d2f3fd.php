@@ -290,7 +290,7 @@
 </div>
   	<script type="text/javascript">
   		var ThinkPHP = window.Think = {
-			"APP"    : "/onepay/index.php?s=",
+			"APP"    : "/index.php?s=",
 			"PATTEM" : "<?php echo C('WEB_PATTEM');?>",
 			"DEEP"   : "<?php echo C('URL_PATHINFO_DEPR');?>",
 			"MODEL"  : ["<?php echo C('URL_MODEL');?>", "<?php echo C('URL_CASE_INSENSITIVE');?>", "<?php echo C('URL_HTML_SUFFIX');?>"],
@@ -302,7 +302,7 @@
 	<script src="<?php echo ($web_tplpath); ?>js/simplefoucs.js"></script>
 	<script src="<?php echo ($web_tplpath); ?>js/jquery.downcount.min.js"></script>
 	<script src="<?php echo ($web_tplpath); ?>js/jquery.cxscroll.min.js"></script>
-	<script src="/onepay/Public/Static/think.js"></script>
+	<script src="/Public/Static/think.js"></script>
 	<script src="<?php echo ($web_tplpath); ?>js/script.js"></script>
 	<!--[if lt IE 9]>
 	<script src="j<?php echo ($web_tplpath); ?>s/jquery.pseudo.js"></script>
